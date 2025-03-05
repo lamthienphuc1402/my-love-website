@@ -29,7 +29,8 @@ const MusicButton = styled.button`
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false)
-  const [audio] = useState(new Audio('/music/EmOi-VuCatTuong-4767367.mp3'))
+  // const [audio] = useState(new Audio('/music/EmOi-VuCatTuong-4767367.mp3'))
+  const [audio] = useState(new Audio('/music/Night-City.mp3'))
 
   useEffect(() => {
     audio.loop = true
