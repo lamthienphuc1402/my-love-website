@@ -72,7 +72,7 @@ interface IntroAnimationProps {
 
 const IntroAnimation = ({ onComplete, startMusic }: IntroAnimationProps) => {
   const [isStarted, setIsStarted] = useState(false)
-  const [count, setCount] = useState(5)
+  const [count, setCount] = useState(1)
   const [showChat, setShowChat] = useState(false)
   const [showName, setShowName] = useState(false)
   const [showLongMessage, setShowLongMessage] = useState(false)
@@ -83,15 +83,15 @@ const IntroAnimation = ({ onComplete, startMusic }: IntroAnimationProps) => {
   useEffect(() => {
     if (!isStarted) return
 
-    if (count > 0) {
-      const timer = setTimeout(() => setCount(count - 1), 1000)
+    if (count < 4) {
+      const timer = setTimeout(() => setCount(count + 1), 750)
       return () => clearTimeout(timer)
-    } else if (count === 0) {
+    } else if (count === 4) {
       setShowChat(true)
       
       // Hiển thị từng tin nhắn chat
       const chatTimers = [
-        setTimeout(() => setChatStep(1), 1000),
+        setTimeout(() => setChatStep(1), 750),
         setTimeout(() => setChatStep(2), 3000),
         setTimeout(() => setChatStep(3), 5000),
         setTimeout(() => setChatStep(4), 7000),
@@ -152,7 +152,7 @@ const IntroAnimation = ({ onComplete, startMusic }: IntroAnimationProps) => {
           </StartButton>
         ) : (
           <>
-            {count > 0 && (
+            {count < 4 && (
               <CountdownText
                 key="countdown"
                 initial={{ scale: 0 }}
