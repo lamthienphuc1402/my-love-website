@@ -81,6 +81,11 @@ const memories = [
     description: 'Tết này thật đặc biệt vì có em. Chúc người yêu của anh năm mới thật nhiều niềm vui và hạnh phúc ❤️'
   },
   {
+    date: '14/2/2025',
+    title: 'Bức thư tay Valentine',
+    description: 'Ngày Valentine đầu tiên, em đã viết bức thư tay 3 trang để bày tỏ tình cảm. Anh đã đọc và xúc động, cảm ơn em đã tạo thêm năng lượng cho anh mỗi ngày'
+  },
+  {
     date: '15/2/2025',
     title: 'Chuyến đi Vũng Tàu',
     description: 'Kỷ niệm khó quên với chuyến đi biển cùng nhau, ngắm hoàng hôn và cùng nhau có 3 ngày tuyệt nhất đời này anh có'
